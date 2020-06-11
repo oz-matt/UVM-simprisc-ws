@@ -1,0 +1,192 @@
+{
+    "Modules": {
+        "_vcs_msglog": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "masterif": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "...MASTER...": {},
+        "cpu": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "uvm_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "vcs_paramclassrepository": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "uvm_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "simprisc_uvm_includes": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "_vcs_unit__3310750452": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "axilite_int": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "memslave": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "_vcs_DPI_package": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "uvm_custom_install_recording": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "riscv_instruction_properties": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "uvm_custom_install_verdi_recording": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "instruction_parser": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "aximem": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "umem": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "mdriver_int": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "master_wrapper": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "sindrv_0000": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "D7Gce_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "hEeZs_d": {
+            "icPath": "csrc"
+        },
+        "xL5KA_d": {
+            "icPath": "csrc"
+        },
+        "zQBzV_d": {
+            "icPath": "csrc"
+        },
+        "uM9F1_d": {
+            "icPath": "csrc"
+        },
+        "T8z4i_d": {
+            "icPath": "csrc"
+        },
+        "eizcd_d": {
+            "icPath": "csrc"
+        },
+        "EbjT3_d": {
+            "icPath": "csrc"
+        },
+        "zr7M1_d": {
+            "icPath": "csrc"
+        },
+        "nhiwz_d": {
+            "icPath": "csrc"
+        },
+        "g4MBa_d": {
+            "icPath": "csrc"
+        },
+        "YkSmf_d": {
+            "icPath": "csrc"
+        },
+        "rqyFU_d": {
+            "icPath": "csrc"
+        },
+        "mjxYt_d": {
+            "icPath": "csrc"
+        },
+        "Cepf6_d": {
+            "icPath": "csrc"
+        },
+        "bibN3_d": {
+            "icPath": "csrc"
+        },
+        "iC1Ix_d": {
+            "icPath": "csrc"
+        },
+        "uVImW_d": {
+            "icPath": "csrc"
+        },
+        "BICVc_d": {
+            "icPath": "csrc"
+        }
+    },
+    "CompUnits": {
+        "Ad5zB_d": {
+            "mod": "_vcs_unit__3310750452",
+            "out": "Ad5zB_d.o",
+            "bytes": 1032618,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.5/_55413_archive_1.a"
+        },
+        "g7hgQ_d": {
+            "mod": "tb",
+            "out": "g7hgQ_d.o",
+            "bytes": 11672,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.5/_55413_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.5/_55413_archive_1.a",
+            "objects": [
+                [
+                    "Ad5zB_d.o",
+                    1032618
+                ],
+                [
+                    "g7hgQ_d.o",
+                    11672
+                ]
+            ],
+            "size": 1044290
+        }
+    ]
+}

@@ -1,11 +1,21 @@
 ################################################################################
 #                    DO NOT MANUALLY EDIT THIS FILE!                           #
 ################################################################################
-# This file contains the automatically generated build configuration (2020/06/10 05:18:06)
+# This file contains the automatically generated build configuration (2020/06/12 04:41:28)
 # requested at line 3 in /home/work/Desktop/UVM-simprisc-ws/.dvt/default.build
 
 
-# Auto-config did not find any files suitable for compilation. 
-# The following directory was scanned:
-# /home/work/Desktop/UVM-simprisc-ws
-# To change compilation root use +dvt_compilation_root. To change file extension mapping use +dvt_ext_map.
+################ Verilog Auto-config Directives ################
++dvt_init
+
+-uvm
+
+src/pkg/simprisc_uvm_includes.svh
+src/tbase.sv
+dut/soc_top.sv
+src/uvm_top.sv
+dut/imem.sv
+dut/testbench.sv
+src/riscv_single_instruction.sv
+src/pkg/riscv_instruction_properties.svh
+

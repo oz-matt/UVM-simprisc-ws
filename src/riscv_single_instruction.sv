@@ -2,7 +2,7 @@
 class riscv_instruction_32b extends uvm_object;
 	
 	riscv_instr_category_t category;
-	riscv_instr_group_t group;
+	riscv_instr_group_t group; // Not implemented yet
 	
 	rand riscv_instr_name_t name;
 	
@@ -22,6 +22,7 @@ class riscv_instruction_32b extends uvm_object;
 		);
 		
 		category = requested_category;
+    group = requested_group;
 	endfunction
 	
 	

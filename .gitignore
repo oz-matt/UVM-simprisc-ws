@@ -1,0 +1,9 @@
+*.report
+*.log
+*log
+*.fsdb
+*~
+*.dat.work.*
+*.h
+
+/simv.daidir
