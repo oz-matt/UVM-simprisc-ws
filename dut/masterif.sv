@@ -1,7 +1,8 @@
 interface masterif (
-	input logic clk,
-	input logic nreset
+	input logic clk
 );
+	
+	logic nreset;
 	
 	logic[31:0] rx [31:0];
 	logic[31:0] pc = 32'h80000000;

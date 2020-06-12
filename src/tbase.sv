@@ -21,17 +21,15 @@ class test_base extends uvm_test;
 		env = sys_env::type_id::create("env", this);
 	endfunction
 	
-	virtual task run_phase(uvm_phase phase);
+	
+	task run_phase(uvm_phase phase);
 	super.run_phase(phase);
-		
-	phase.raise_objection(this); 
-			#2; 
-			`uvm_warning("", "Hello World!");
-			`uvm_info("TRACE", $sformatf("%m"), UVM_HIGH);
-		`uvm_info("TRACE", "lul", UVM_HIGH);
-	phase.drop_objection(this);
-		`uvm_info("TRACE", "hehe", UVM_HIGH);
-		
+	`uvm_warning("", "Hello World!");
+		phase.raise_objection(this); 
+		begin seq seq1; 
+			seq1 = seq::type_id::create("seq"); 
+			seq1.start(env.drv_side_sequencer); 
+		end
+		phase.drop_objection(this); 
 	endtask
-
 endclass

@@ -28,6 +28,7 @@ virtual task run_phase(uvm_phase phase);
 		`uvm_info("TRACE", $sformatf("%m"), UVM_HIGH);
 
 		forever begin
+			@(posedge vif.clk);
 			tr = seq_packet::type_id::create("tr", this);
 			tr.data = vif.instruction_raw;
 			`uvm_info("Got_Input_Packet", {"\n", tr.sprint()}, UVM_MEDIUM);

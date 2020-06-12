@@ -12,7 +12,7 @@ rtl_path = ./uvm
 DUT = dut/soc_top.sv
 PROTOCOL_CHECKER = ./protocol_checker/axi_raddr_props.sv  ./protocol_checker/axi_rdata_props.sv ./protocol_checker/axi_waddr_props.sv  ./protocol_checker/axi_wdata_props.sv  ./protocol_checker/axi_wresp_props.sv 
 TB_SCOREBOARD = ./uvm/scoreboard/sb_comparator.sv ./uvm/scoreboard/tb_scoreboard.sv 
-TOP = dut/testbench.sv ${PACKAGES} ${PROGRAM_TOP}
+TOP = ${PACKAGES} dut/testbench.sv
 
 log = simv.log
 verbosity = UVM_MEDIUM

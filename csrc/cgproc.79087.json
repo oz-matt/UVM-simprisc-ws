@@ -1,0 +1,239 @@
+{
+    "Modules": {
+        "uvm_custom_install_recording": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "...MASTER...": {},
+        "axilite_int": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "vcs_paramclassrepository": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "uvm_custom_install_verdi_recording": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "instruction_parser": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "_vcs_DPI_package": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "_vcs_unit__1530967649": {
+            "Compiled": "Yes",
+            "Compiled Times": 9
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "uvm_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "master_wrapper": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "_vcs_msglog": {
+            "Compiled": "Yes",
+            "Compiled Times": 14
+        },
+        "riscv_instruction_properties": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "masterif": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "aximem": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "mdriver_int": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "umem": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "memslave": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "sindrv_0000": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "cpu": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "simprisc_uvm_includes": {
+            "Compiled": "Yes",
+            "Compiled Times": 11
+        },
+        "tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        }
+    },
+    "CompUnits": {
+        "zr7M1_d": {
+            "mod": "uvm_pkg",
+            "checksum": 0,
+            "out": "zr7M1_d.o",
+            "bytes": 6788038,
+            "archive": "archive.14/_79087_archive_1.a",
+            "mode": 4
+        },
+        "hEeZs_d": {
+            "mod": "vcs_paramclassrepository",
+            "checksum": 0,
+            "out": "hEeZs_d.o",
+            "bytes": 6209494,
+            "archive": "archive.14/_79087_archive_1.a",
+            "mode": 4
+        },
+        "NErGV_d": {
+            "mod": "_vcs_unit__1530967649",
+            "checksum": 0,
+            "out": "NErGV_d.o",
+            "bytes": 1032823,
+            "archive": "archive.14/_79087_archive_1.a",
+            "mode": 4
+        },
+        "g7hgQ_d": {
+            "mod": "tb",
+            "checksum": 0,
+            "out": "g7hgQ_d.o",
+            "bytes": 16946,
+            "archive": "archive.14/_79087_archive_1.a",
+            "mode": 4
+        },
+        "uVImW_d": {
+            "mod": "simprisc_uvm_includes",
+            "checksum": 0,
+            "out": "uVImW_d.o",
+            "bytes": 386977,
+            "archive": "archive.14/_79087_archive_1.a",
+            "mode": 4
+        },
+        "g4MBa_d": {
+            "mod": "masterif",
+            "checksum": 0,
+            "out": "g4MBa_d.o",
+            "bytes": 18421,
+            "archive": "archive.14/_79087_archive_1.a",
+            "mode": 4
+        },
+        "rqyFU_d": {
+            "mod": "aximem",
+            "checksum": 0,
+            "out": "rqyFU_d.o",
+            "bytes": 7653,
+            "archive": "archive.14/_79087_archive_1.a",
+            "mode": 4
+        },
+        "D7Gce_d": {
+            "mod": "cpu",
+            "checksum": 0,
+            "out": "D7Gce_d.o",
+            "bytes": 106082,
+            "archive": "archive.14/_79087_archive_1.a",
+            "mode": 4
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "uM9F1_d": {
+            "icPath": "csrc"
+        },
+        "zQBzV_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "T8z4i_d": {
+            "icPath": "csrc"
+        },
+        "nhiwz_d": {
+            "icPath": "csrc"
+        },
+        "Cepf6_d": {
+            "icPath": "csrc"
+        },
+        "EbjT3_d": {
+            "icPath": "csrc"
+        },
+        "mjxYt_d": {
+            "icPath": "csrc"
+        },
+        "bibN3_d": {
+            "icPath": "csrc"
+        },
+        "eizcd_d": {
+            "icPath": "csrc"
+        },
+        "iC1Ix_d": {
+            "icPath": "csrc"
+        },
+        "xL5KA_d": {
+            "icPath": "csrc"
+        },
+        "YkSmf_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.14/_79087_archive_1.a",
+            "objects": [
+                [
+                    "hEeZs_d.o",
+                    6209494
+                ],
+                [
+                    "NErGV_d.o",
+                    1032823
+                ],
+                [
+                    "zr7M1_d.o",
+                    6788038
+                ],
+                [
+                    "g4MBa_d.o",
+                    18421
+                ],
+                [
+                    "rqyFU_d.o",
+                    7653
+                ],
+                [
+                    "D7Gce_d.o",
+                    106082
+                ],
+                [
+                    "uVImW_d.o",
+                    386977
+                ],
+                [
+                    "g7hgQ_d.o",
+                    16946
+                ]
+            ],
+            "size": 14566434
+        }
+    ]
+}

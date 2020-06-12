@@ -5,5 +5,10 @@
 *~
 *.dat.work.*
 *.h
+*.vpd
+*.key
+*.project
+
+simv
 
 /simv.daidir

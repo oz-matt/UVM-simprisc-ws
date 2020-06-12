@@ -11,14 +11,14 @@
 	
 	module soc_top(
 	input logic clk,
-	input logic nreset
+	masterif mif
 );
 	
 	
-	mdriver_int#(32,9) vif(.*);
+	mdriver_int#(32,9) vif(.clk(clk), .nreset(mif.nreset));
 		
 	master_wrapper master_wrapper_inst(.io(vif.slave), .mem(aximem_inst.axim));
-	cpu cpu_inst(.*, .io(aximem_inst.mem));
+	cpu cpu_inst(.*, .io(aximem_inst.mem), .mif(mif));
 	sindrv sindrv_inst(.io(vif.master));
 	aximem aximem_inst();
 	

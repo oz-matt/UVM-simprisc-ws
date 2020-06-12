@@ -14,5 +14,8 @@ package simprisc_uvm_includes;
 	`include "src/scoreboard/tb_scoreboard.sv" 
 
 	`include "src/env.sv" 
+	
+	`include "src/tbase.sv" 
+	
 endpackage
 

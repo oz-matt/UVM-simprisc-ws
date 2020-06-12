@@ -1,11 +1,10 @@
 
 module cpu (
 	input clk,
-	input nreset,
-	aximem.mem io
+	aximem.mem io,
+	masterif mif
 );
 
-	masterif mif(.*);
 
 	//imem imem_inst(mif.imem);
 	umem umem_inst(.io(mif.umem), .mem(io));
@@ -29,7 +28,7 @@ module cpu (
 		BNE, BLT, BLTU, BGE, BGEU} ? 1 : 0;
 	
 	always @(posedge clk) begin
-		if(!nreset) begin
+		if(!mif.nreset) begin
 			//mif.pc <= 0;
 		end
 		else begin
@@ -379,7 +378,7 @@ module cpu (
 		if(!mif.nreset) begin
 			//mif.rx = '{default:32'h00000000};
 			mif.rx[0] = 0;
-			mif.rx[1] = 0;
+			mif.rx[1] = 77;
 			mif.rx[2] = 4;
 			mif.rx[3] = 44;
 			mif.rx[4] = 'hfffffffe;
