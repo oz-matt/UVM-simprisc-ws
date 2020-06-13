@@ -2,29 +2,25 @@
 import uvm_pkg::*;
 import riscv_instruction_properties::*;
 
-class arithmetic_instruction_si extends uvm_sequence_item;
+class arithmetic_instruction_si extends instruction_base_si;
 	
-	rand riscv_instr_format_t format;
-	rand riscv_instr_name_t name;
-	
-	rand bit[4:0] rs1, rs2, rd;
-	
-	rand bit[11:0] i_imm;
-	rand bit[4:0] is_shamt;
-	rand bit[19:0] u_imm;
-	
-	
-	constraint c_solveorder {
-		solve format before name;
-		format inside {R_FORMAT, U_FORMAT, I_FORMAT, I_FORMAT_SHIFT};
-	}
-	
-	constraint c_ari {
-		(format == R_FORMAT) -> name inside {ADD, SLT, SLTU, AND, 
-					OR, XOR, SLL, SRL, SUB, SRA};
-		(format == U_FORMAT) -> name inside {LUI, AUIPC};
-		(format == I_FORMAT_SHIFT) -> name inside {SLLI, SRLI, SRAI};
-		(format == I_FORMAT) -> name inside {ADDI, SLTI, ANDI, ORI, XORI};
-	};
+	function new();
+		super.new(name);
+		case(format) inside
+			
+			R_FORMAT:
+				raw_bits = {get_func7(name), rs2, rs1, get_func3(name), rd, get_opcode(name)};
+			
+			U_FORMAT:
+				raw_bits = {u_imm, rd, get_opcode(name)};
+			
+			I_FORMAT_SHIFT:
+				raw_bits = {get_func7(name), is_shamt, rs1, get_func3(name), rd, get_opcode(name)};
+
+			I_FORMAT:
+				raw_bits = {i_imm, rs1, get_func3(name), rd, get_opcode(name)};
+
+		endcase
+	endfunction
 	
 endclass

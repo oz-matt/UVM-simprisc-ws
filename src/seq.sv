@@ -1,6 +1,6 @@
 import uvm_pkg::*;
 
-class seq extends uvm_sequence#(seq_packet);
+class seq extends uvm_sequence#(arithmetic_instruction_si);
 	`uvm_object_utils(seq)
 	
 	function new (string name = "seq");
@@ -11,7 +11,7 @@ class seq extends uvm_sequence#(seq_packet);
 	
 	task body; 
 		repeat(20) begin 
-			/*req = seq_packet::type_id::create("req"); 
+			/*req = arithmetic_instruction_si::type_id::create("req"); 
 			wait_for_grant();                            //wait for grant
 		assert(req.randomize());                     //randomize the req                   
 		send_request(req);                           //send req to driver

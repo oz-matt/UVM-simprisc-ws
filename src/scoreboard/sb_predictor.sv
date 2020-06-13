@@ -1,7 +1,7 @@
-class sb_predictor extends uvm_subscriber #(seq_packet);
+class sb_predictor extends uvm_subscriber #(arithmetic_instruction_si);
 	`uvm_component_utils(sb_predictor)
 
-	uvm_analysis_port #(seq_packet) results_ap;
+	uvm_analysis_port #(arithmetic_instruction_si) results_ap;
 
 	function new(string name, uvm_component parent);
 		super.new(name, parent);
@@ -12,14 +12,14 @@ class sb_predictor extends uvm_subscriber #(seq_packet);
 		results_ap = new("results_ap", this);
 	endfunction
 
-	function void write(seq_packet t);
-		seq_packet exp_tr;
+	function void write(arithmetic_instruction_si t);
+		arithmetic_instruction_si exp_tr;
 
 		exp_tr = sb_calc_exp(t);
 		results_ap.write(exp_tr);
 	endfunction 
 	
-	extern function seq_packet sb_calc_exp(seq_packet t); 
+	extern function arithmetic_instruction_si sb_calc_exp(arithmetic_instruction_si t); 
 	
 
 endclass 

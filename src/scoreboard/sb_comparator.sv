@@ -3,10 +3,10 @@ import uvm_pkg::*;
 class sb_comparator extends uvm_component;
 	`uvm_component_utils(sb_comparator)
 	
-	uvm_analysis_export #(seq_packet)   axp_in;
-	uvm_analysis_export #(seq_packet)   axp_out;
-	uvm_tlm_analysis_fifo #(seq_packet) expfifo;
-	uvm_tlm_analysis_fifo #(seq_packet) outfifo;
+	uvm_analysis_export #(arithmetic_instruction_si)   axp_in;
+	uvm_analysis_export #(arithmetic_instruction_si)   axp_out;
+	uvm_tlm_analysis_fifo #(arithmetic_instruction_si) expfifo;
+	uvm_tlm_analysis_fifo #(arithmetic_instruction_si) outfifo;
 
 	function new (string name, uvm_component parent);
 		super.new(name, parent);
@@ -27,7 +27,7 @@ class sb_comparator extends uvm_component;
 	endfunction
 
 	task run_phase(uvm_phase phase);
-		seq_packet exp_tr, out_tr;
+		arithmetic_instruction_si exp_tr, out_tr;
 		forever begin
 			`uvm_info("sb_comparator run task",
 				"WAITING for expected output", UVM_DEBUG)

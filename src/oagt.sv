@@ -8,7 +8,7 @@ class oagt extends uvm_agent;
 	
 	virtual masterif vif;
 		oMonitor mon;
-		uvm_analysis_port #(seq_packet) analysis_port;
+		uvm_analysis_port #(arithmetic_instruction_si) analysis_port;
 	
 	function new (string name, uvm_component parent);
 		super.new(name, parent);

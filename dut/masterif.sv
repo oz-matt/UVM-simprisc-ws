@@ -16,7 +16,7 @@ interface masterif (
 	assign rx3=rx[3];
 	assign rx0=rx[0];
 	
-	logic[31:0] instruction_raw;
+	bit[31:0] instruction_raw;
 	
 	logic[31:0] mem_wdata;
 	logic[31:0] mem_rdata;

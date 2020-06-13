@@ -3,8 +3,8 @@ import uvm_pkg::*;
 class scoreboard extends uvm_scoreboard;
 	`uvm_component_utils(scoreboard)
 
-	uvm_analysis_imp #(seq_packet, scoreboard) sb_aport;
-	uvm_analysis_imp #(seq_packet, scoreboard) sb_outaport;
+	uvm_analysis_imp #(arithmetic_instruction_si, scoreboard) sb_aport;
+	uvm_analysis_imp #(arithmetic_instruction_si, scoreboard) sb_outaport;
 	
 	function new(string name, uvm_component parent);
 		super.new(name, parent);
@@ -24,7 +24,7 @@ class scoreboard extends uvm_scoreboard;
 
 	endfunction: connect_phase
 	
-	virtual function void write (seq_packet data);
+	virtual function void write (arithmetic_instruction_si data);
 		`uvm_info ("write", $sformatf("%m"), UVM_MEDIUM)
 		data.print();
 	endfunction

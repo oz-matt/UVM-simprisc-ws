@@ -1,8 +1,6 @@
 import uvm_pkg::*;
 
-//`include "uvm/seq_packet.sv"
-
-class drv extends uvm_driver#(seq_packet);
+class drv extends uvm_driver#(arithmetic_instruction_si);
 	`uvm_component_utils(drv)
 	
 	virtual masterif vif;
@@ -38,9 +36,12 @@ class drv extends uvm_driver#(seq_packet);
 		repeat(2) @(posedge vif.clk);
 		
 		forever begin
+			arithmetic_instruction_si i = new();
 			repeat(5) @(posedge vif.clk);
 			seq_item_port.get_next_item(req);
-			vif.instruction_raw = 32'h00102023;
+			//vif.instruction_raw = 32'h00102023;
+			vif.instruction_raw = i.get_raw_bits();
+			$display("raw: %X", vif.instruction_raw);
 			`uvm_info("DRV_RUN", {"\n", req.sprint()}, UVM_MEDIUM);
 			seq_item_port.item_done();
 		end

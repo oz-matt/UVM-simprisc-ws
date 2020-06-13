@@ -1,6 +1,7 @@
 package simprisc_uvm_includes;
 	
 	`include "src/pkg/riscv_instruction_properties.svh"
+	`include "src/seq_items/instruction_base_si.sv"
 	`include "src/seq_items/arithmetic_instruction_si.sv"
 	
 	`include "src/seq_packet.sv"

@@ -7,7 +7,7 @@ class sys_env extends uvm_env;
 	agt agent;
 	oagt oagent;
 	drv drv_inst;
-	uvm_sequencer#(seq_packet) drv_side_sequencer;
+	uvm_sequencer#(arithmetic_instruction_si) drv_side_sequencer;
 
 	function new(string name, uvm_component parent);
 		super.new(name, parent);
@@ -20,7 +20,7 @@ class sys_env extends uvm_env;
 		agent = agt::type_id::create("agent", this);
 		oagent = oagt::type_id::create("oagent", this);
 		scbd = tb_scoreboard::type_id::create ("scbd", this);
-			drv_side_sequencer = uvm_sequencer#(seq_packet)::type_id::create("drv_side_sequencer", this);
+			drv_side_sequencer = uvm_sequencer#(arithmetic_instruction_si)::type_id::create("drv_side_sequencer", this);
 			drv_inst = drv::type_id::create("drv", this);
 	endfunction: build_phase
 
