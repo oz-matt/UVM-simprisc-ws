@@ -1,7 +1,10 @@
+import uvm_pkg::*;
+
 class test_base extends uvm_test;
 	`uvm_component_utils(test_base)
 	
 	sys_env env;
+	virtual masterif vif;
 	
 	function new(string name, uvm_component parent);
 		super.new(name, parent);
@@ -13,6 +16,11 @@ class test_base extends uvm_test;
 		`uvm_info("TRACE", $sformatf("%m"), UVM_HIGH);
 		uvm_root::get().print_topology();
 		uvm_factory::get().print();
+		
+		uvm_config_db#(virtual masterif)::get(this, "", "vif", vif);
+		
+		vif.pc = 32'h80000000;
+		
 	endfunction
 
 	virtual function void build_phase(uvm_phase phase);

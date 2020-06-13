@@ -5,7 +5,6 @@ module cpu (
 	masterif mif
 );
 
-
 	//imem imem_inst(mif.imem);
 	umem umem_inst(.io(mif.umem), .mem(io));
 	
