@@ -5,7 +5,7 @@ class iMonitor extends uvm_monitor;
 	
 	virtual masterif vif;
 
-	uvm_analysis_port #(arithmetic_instruction_si) analysis_port;
+	uvm_analysis_port #(instruction_base_si) analysis_port;
 
 
 	function new(string name, uvm_component parent);
@@ -24,15 +24,15 @@ class iMonitor extends uvm_monitor;
 	endfunction: build_phase
 virtual task run_phase(uvm_phase phase);
 
-		arithmetic_instruction_si tr;
+		instruction_base_si tr;
 		`uvm_info("TRACE", $sformatf("%m"), UVM_HIGH);
 
 		forever begin
 			@(posedge vif.clk);
-			//tr = arithmetic_instruction_si::type_id::create("tr", this);
+			//tr = instruction_base_si::type_id::create("tr", this);
 			//tr.data = vif.instruction_raw;
-			$display("raw: %X", vif.instruction_raw);
-			`uvm_info("Got_Input_Packet", {"\n", vif.instruction_raw}, UVM_MEDIUM);
+			//$display("raw: %X", vif.instruction_raw);
+			//`uvm_info("Got_Input_Packet", {"\n", vif.instruction_raw}, UVM_MEDIUM);
 			analysis_port.write(tr);
 		end
 		

@@ -1,8 +1,8 @@
 class tb_scoreboard extends uvm_scoreboard;
 	`uvm_component_utils(tb_scoreboard)
 
-	uvm_analysis_export #(arithmetic_instruction_si) axp_in;
-	uvm_analysis_export #(arithmetic_instruction_si) axp_out;
+	uvm_analysis_export #(instruction_base_si) axp_in;
+	uvm_analysis_export #(instruction_base_si) axp_out;
 	sb_predictor                      prd;
 	sb_comparator                     cmp;
 

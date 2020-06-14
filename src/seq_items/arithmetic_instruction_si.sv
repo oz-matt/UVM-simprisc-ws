@@ -2,7 +2,7 @@
 import uvm_pkg::*;
 import riscv_instruction_properties::*;
 
-class arithmetic_instruction_si extends instruction_base_si;
+class arithmetic_instruction_si;// extends instruction_base_si;
 	
 	function new();
 		super.new(name);
