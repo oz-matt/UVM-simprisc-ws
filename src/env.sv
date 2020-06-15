@@ -7,12 +7,16 @@ class sys_env extends uvm_env;
 	agt agent;
 	oagt oagent;
 	drv drv_inst;
-	uvm_sequencer#(instruction_base_si) drv_side_sequencer;
+	uvm_sequencer#(load_instruction_si) drv_side_sequencer;
 
 	function new(string name, uvm_component parent);
 		super.new(name, parent);
 		`uvm_info("TRACE", $sformatf("%m"), UVM_HIGH);
 	endfunction: new
+	
+	virtual function void start_of_simulation();
+		set_report_id_action("REGDUMP", UVM_LOG);
+	endfunction
 
 	virtual function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
@@ -20,7 +24,7 @@ class sys_env extends uvm_env;
 		agent = agt::type_id::create("agent", this);
 		oagent = oagt::type_id::create("oagent", this);
 		//scbd = tb_scoreboard::type_id::create ("scbd", this);
-			drv_side_sequencer = uvm_sequencer#(instruction_base_si)::type_id::create("drv_side_sequencer", this);
+			drv_side_sequencer = uvm_sequencer#(load_instruction_si)::type_id::create("drv_side_sequencer", this);
 			drv_inst = drv::type_id::create("drv", this);
 	endfunction: build_phase
 

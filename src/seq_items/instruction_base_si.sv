@@ -9,10 +9,6 @@ class instruction_base_si extends uvm_sequence_item;
 	
 	rand bit[4:0] rs1, rs2, rd;
 	
-	rand bit[11:0] i_imm;
-	rand bit[4:0] is_shamt;
-	rand bit[19:0] u_imm;
-	
 	bit[31:0] raw_bits;
 	
 	
@@ -21,45 +17,11 @@ class instruction_base_si extends uvm_sequence_item;
 	
 	function new(string inst_name = "instruction_base_si");
 		super.new(inst_name);
-		/*case(format) inside
-			
-			R_FORMAT:
-				raw_bits = {get_func7(name), rs2, rs1, get_func3(name), rd, get_opcode(name)};
-			
-			U_FORMAT:
-				raw_bits = {u_imm, rd, get_opcode(name)};
-			
-			I_FORMAT_SHIFT:
-				raw_bits = {get_func7(name), is_shamt, rs1, get_func3(name), rd, get_opcode(name)};
-
-			I_FORMAT:
-				raw_bits = {i_imm, rs1, get_func3(name), rd, get_opcode(name)};
-
-		endcase*/
-	endfunction
+		endfunction
 		
-	
 	virtual function bit[31:0] get_raw_bits();
-		
-		raw_bits = {get_func7(name), rs2, rs1, get_func3(name), rd, get_opcode(name)};
-			
 		return raw_bits;
 	endfunction
-	
-	/*constraint c_solveorder {
-		solve format before name;
-		format inside {R_FORMAT, U_FORMAT, I_FORMAT, I_FORMAT_SHIFT};
-	};*/
-	
-	constraint c_ari {
-		
-		format inside {R_FORMAT, U_FORMAT, I_FORMAT, I_FORMAT_SHIFT};
-		(format == R_FORMAT) -> name inside {ADD, SLT, SLTU, AND, 
-					OR, XOR, SLL, SRL, SUB, SRA};
-		(format == U_FORMAT) -> name inside {LUI, AUIPC};
-		(format == I_FORMAT_SHIFT) -> name inside {SLLI, SRLI, SRAI};
-		(format == I_FORMAT) -> name inside {ADDI, SLTI, ANDI, ORI, XORI};
-	};
 	
 	function bit [6:0] get_opcode(riscv_instr_name_t instr_name);
 		case (instr_name) inside

@@ -39,7 +39,7 @@ cmdi = std.cmd
 cmd = none.cmd
 prev = verdi.cmd
 
-all: simv run
+all: compile simv run
 
 simv compile: ${DUT} ${TOP}
 ifeq ($(CES64),TRUE)

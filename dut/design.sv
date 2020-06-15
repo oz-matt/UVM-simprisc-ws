@@ -163,35 +163,35 @@ module cpu (
 					mif.mem_rw = 0;
 					mif.mem_addr = mif.rx[instruction.rs1] + `SIGN_EXTEND32(12, instruction.i_imm);
 					rdbuffer = mif.mem_rdata;
-					$display("rd; %X", mif.rx[instruction.rd]);
+					$display("LW: rd: %X, from addr: %X", rdbuffer, mif.mem_addr);
 				end
 				
 				LH: begin //Load 16-bit val (sign extended to 32-bits) at umem[rx[rs1] + imm] into rd
 					mif.mem_rw = 0;
 					mif.mem_addr = mif.rx[instruction.rs1] + `SIGN_EXTEND32(12, instruction.i_imm);
 					rdbuffer = `SIGN_EXTEND32(16, mif.mem_rdata);
-					$display("rd; %X", mif.rx[instruction.rd]);
+					$display("LH: rd: %X, from addr: %X", rdbuffer, mif.mem_addr);
 				end
 				
 				LHU: begin //Load 16-bit val (zero extended to 32-bits) at umem[rx[rs1] + imm] into rd
 					mif.mem_rw = 0;
 					mif.mem_addr = mif.rx[instruction.rs1] + `SIGN_EXTEND32(12, instruction.i_imm);
 					rdbuffer = {16'h0000, mif.mem_rdata[15:0]};
-					$display("rd; %X", mif.rx[instruction.rd]);
+					$display("LHU: rd: %X, from addr: %X", rdbuffer, mif.mem_addr);
 				end
 				
 				LB: begin //Load 8-bit val (sign extended to 32-bits) at umem[rx[rs1] + imm] into rd
 					mif.mem_rw = 0;
 					mif.mem_addr = mif.rx[instruction.rs1] + `SIGN_EXTEND32(12, instruction.i_imm);
 					rdbuffer = `SIGN_EXTEND32(8, mif.mem_rdata);
-					$display("rd; %X", mif.rx[instruction.rd]);
+					$display("LB: rd: %X, from addr: %X", rdbuffer, mif.mem_addr);
 				end
 				
 				LBU: begin //Load 8-bit val (zero extended to 32-bits) at umem[rx[rs1] + imm] into rd
 					mif.mem_rw = 0;
 					mif.mem_addr = mif.rx[instruction.rs1] + `SIGN_EXTEND32(12, instruction.i_imm);
 					rdbuffer = {24'h000000, mif.mem_rdata[7:0]};
-					$display("rd; %X", mif.rx[instruction.rd]);
+					$display("LBU: rd: %X, from addr: %X", rdbuffer, mif.mem_addr);
 				end
 				
 				SW, SH, SB: begin //Store 32, 16 or 8 bit val from rs2 into umem[rx[rs1] + imm]

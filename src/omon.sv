@@ -5,7 +5,7 @@ class oMonitor extends uvm_monitor;
 	
 	virtual masterif vif;
 
-	uvm_analysis_port #(instruction_base_si) analysis_port;
+	uvm_analysis_port #(load_instruction_si) analysis_port;
 
 
 	function new(string name, uvm_component parent);
@@ -24,12 +24,12 @@ class oMonitor extends uvm_monitor;
 	endfunction: build_phase
 virtual task run_phase(uvm_phase phase);
 
-		instruction_base_si tr;
+		load_instruction_si tr;
 		`uvm_info("TRACE", $sformatf("%m"), UVM_HIGH);
 
 		forever begin
 			@(posedge vif.clk);
-			//tr = instruction_base_si::type_id::create("tr", this);
+			//tr = load_instruction_si::type_id::create("tr", this);
 			//if(vif.mem_rw) begin
 			//tr.data = vif.mem_wdata;
 			//`uvm_info("Got_Output_Packet", {"\n", vif.mem_wdata}, UVM_MEDIUM);
