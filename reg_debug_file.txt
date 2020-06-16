@@ -1,0 +1,2 @@
+yoyoyoyoyoyohihiyoyoyoyoUVM_WARNING src/tbase.sv(25) @ 0: uvm_test_top [REGFILE] 5555
+UVM_WARNING src/tbase.sv(42) @ 0: uvm_test_top [] Hello World!

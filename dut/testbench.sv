@@ -8,6 +8,8 @@ module tb();
 	
 	byte progmem[int]; //Associative array for entire cpu memory space
 	
+	UVM_FILE regdebugfile;
+	
 	initial begin
 		clk <= 0;
 		forever #10 clk <= !clk;
@@ -22,8 +24,13 @@ module tb();
 	end
 	
 	initial begin
+		//$fwrite(regdebugfile, "yoyo");
+		regdebugfile = $fopen("reg_debug_file.txt", "a+");
 		uvm_config_db#(virtual masterif)::set(null, "", "vif", vif);
+		uvm_config_db#(UVM_FILE)::set(null, "*", "regdebugfile", regdebugfile);
+		
 		run_test();
-		end
+		$fclose(regdebugfile);
+	end
 
 endmodule

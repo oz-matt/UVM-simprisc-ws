@@ -1,0 +1,185 @@
+{
+    "Modules": {
+        "memslave": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "...MASTER...": {},
+        "uvm_custom_install_recording": {
+            "Compiled Times": 95,
+            "Compiled": "Yes"
+        },
+        "vcs_paramclassrepository": {
+            "Compiled Times": 95,
+            "Compiled": "Yes"
+        },
+        "cpu": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "uvm_pkg": {
+            "Compiled Times": 95,
+            "Compiled": "Yes"
+        },
+        "_vcs_unit__1530967649": {
+            "Compiled Times": 90,
+            "Compiled": "Yes"
+        },
+        "_vcs_DPI_package": {
+            "Compiled Times": 95,
+            "Compiled": "Yes"
+        },
+        "std": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "_vcs_msglog": {
+            "Compiled Times": 95,
+            "Compiled": "Yes"
+        },
+        "uvm_custom_install_verdi_recording": {
+            "Compiled Times": 95,
+            "Compiled": "Yes"
+        },
+        "aximem": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "masterif": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "instruction_parser": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "umem": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "axilite_int": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "mdriver_int": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "master_wrapper": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "sindrv_0000": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        },
+        "simprisc_uvm_includes": {
+            "Compiled Times": 92,
+            "Compiled": "Yes"
+        },
+        "riscv_instruction_properties": {
+            "Compiled Times": 92,
+            "Compiled": "Yes"
+        },
+        "tb": {
+            "Compiled Times": 96,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "hEeZs_d": {
+            "mode": 4,
+            "mod": "vcs_paramclassrepository",
+            "archive": "archive.95/_10990_archive_1.a",
+            "out": "hEeZs_d.o",
+            "bytes": 6261108,
+            "checksum": 0
+        },
+        "uVImW_d": {
+            "mode": 4,
+            "mod": "simprisc_uvm_includes",
+            "archive": "archive.95/_10990_archive_1.a",
+            "out": "uVImW_d.o",
+            "bytes": 496994,
+            "checksum": 0
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "T8z4i_d": {
+            "icPath": "csrc"
+        },
+        "uM9F1_d": {
+            "icPath": "csrc"
+        },
+        "eizcd_d": {
+            "icPath": "csrc"
+        },
+        "zr7M1_d": {
+            "icPath": "csrc"
+        },
+        "xL5KA_d": {
+            "icPath": "csrc"
+        },
+        "NErGV_d": {
+            "icPath": "csrc"
+        },
+        "mjxYt_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "g4MBa_d": {
+            "icPath": "csrc"
+        },
+        "zQBzV_d": {
+            "icPath": "csrc"
+        },
+        "nhiwz_d": {
+            "icPath": "csrc"
+        },
+        "EbjT3_d": {
+            "icPath": "csrc"
+        },
+        "rqyFU_d": {
+            "icPath": "csrc"
+        },
+        "Cepf6_d": {
+            "icPath": "csrc"
+        },
+        "bibN3_d": {
+            "icPath": "csrc"
+        },
+        "iC1Ix_d": {
+            "icPath": "csrc"
+        },
+        "D7Gce_d": {
+            "icPath": "csrc"
+        },
+        "YkSmf_d": {
+            "icPath": "csrc"
+        },
+        "g7hgQ_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.95/_10990_archive_1.a",
+            "objects": [
+                [
+                    "hEeZs_d.o",
+                    6261108
+                ],
+                [
+                    "uVImW_d.o",
+                    496994
+                ]
+            ],
+            "size": 6758102
+        }
+    ]
+}
