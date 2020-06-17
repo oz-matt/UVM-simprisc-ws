@@ -25,7 +25,7 @@ module tb();
 	
 	initial begin
 		//$fwrite(regdebugfile, "yoyo");
-		regdebugfile = $fopen("reg_debug_file.txt", "a+");
+		regdebugfile = $fopen("reg_debug_file.txt", "w");
 		uvm_config_db#(virtual masterif)::set(null, "", "vif", vif);
 		uvm_config_db#(UVM_FILE)::set(null, "*", "regdebugfile", regdebugfile);
 		

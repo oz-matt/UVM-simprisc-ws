@@ -1,2 +1,32 @@
-yoyoyoyoyoyohihiyoyoyoyoUVM_WARNING src/tbase.sv(25) @ 0: uvm_test_top [REGFILE] 5555
-UVM_WARNING src/tbase.sv(42) @ 0: uvm_test_top [] Hello World!
+reg         31: 00000000
+reg         30: 00000000
+reg         29: 00000000
+reg         28: 00000000
+reg         27: 00000000
+reg         26: 00000000
+reg         25: 00000000
+reg         24: 00000000
+reg         23: 00000000
+reg         22: 00000000
+reg         21: 00000000
+reg         20: 00000000
+reg         19: 00000000
+reg         18: 00000000
+reg         17: 00000000
+reg         16: 00000000
+reg         15: 00000000
+reg         14: 00000000
+reg         13: 00000000
+reg         12: 00000000
+reg         11: 00000000
+reg         10: 00000000
+reg          9: 00000000
+reg          8: 00000000
+reg          7: 00000000
+reg          6: 00000000
+reg          5: 00000000
+reg          4: 00000000
+reg          3: 00000000
+reg          2: 00000011
+reg          1: 00000000
+reg          0: 00000000

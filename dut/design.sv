@@ -381,6 +381,8 @@ module cpu (
 			mif.rx[2] = 4;
 			mif.rx[3] = 44;
 			mif.rx[4] = 'hfffffffe;
+			foreach(mif.rx[i])
+				mif.rx[i] = 0;
 		end
 		else begin
 			if(rd_w_en)

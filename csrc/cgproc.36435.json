@@ -1,0 +1,176 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "vcs_paramclassrepository": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "cpu": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "_vcs_msglog": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "instruction_parser": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "umem": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "uvm_custom_install_recording": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "_vcs_DPI_package": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "uvm_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "_vcs_unit__1530967649": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "memslave": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "mdriver_int": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "uvm_custom_install_verdi_recording": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "masterif": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "aximem": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "axilite_int": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "sindrv_0000": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "master_wrapper": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "riscv_instruction_properties": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "simprisc_uvm_includes": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        },
+        "tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 10
+        }
+    },
+    "CompUnits": {
+        "uVImW_d": {
+            "checksum": 0,
+            "bytes": 490214,
+            "mod": "simprisc_uvm_includes",
+            "out": "uVImW_d.o",
+            "mode": 4,
+            "archive": "archive.10/_36435_archive_1.a"
+        }
+    },
+    "reusePaths": {
+        "EbjT3_d": {
+            "icPath": "csrc"
+        },
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "bibN3_d": {
+            "icPath": "csrc"
+        },
+        "D7Gce_d": {
+            "icPath": "csrc"
+        },
+        "hEeZs_d": {
+            "icPath": "csrc"
+        },
+        "iC1Ix_d": {
+            "icPath": "csrc"
+        },
+        "uM9F1_d": {
+            "icPath": "csrc"
+        },
+        "g7hgQ_d": {
+            "icPath": "csrc"
+        },
+        "zQBzV_d": {
+            "icPath": "csrc"
+        },
+        "NErGV_d": {
+            "icPath": "csrc"
+        },
+        "T8z4i_d": {
+            "icPath": "csrc"
+        },
+        "xL5KA_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "zr7M1_d": {
+            "icPath": "csrc"
+        },
+        "nhiwz_d": {
+            "icPath": "csrc"
+        },
+        "g4MBa_d": {
+            "icPath": "csrc"
+        },
+        "eizcd_d": {
+            "icPath": "csrc"
+        },
+        "rqyFU_d": {
+            "icPath": "csrc"
+        },
+        "Cepf6_d": {
+            "icPath": "csrc"
+        },
+        "mjxYt_d": {
+            "icPath": "csrc"
+        },
+        "YkSmf_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "uVImW_d.o",
+                    490214
+                ]
+            ],
+            "archive": "archive.10/_36435_archive_1.a",
+            "size": 490214
+        }
+    ]
+}
