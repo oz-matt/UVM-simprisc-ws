@@ -4,31 +4,31 @@ import uvm_pkg::*;
 //`include "uvm/driver.sv"
 
 class oagt extends uvm_agent;
-  `uvm_component_utils(oagt)
+	`uvm_component_utils(oagt)
 
-  virtual masterif                         vif;
-  oMonitor                                 mon;
-  uvm_analysis_port #(load_instruction_si) analysis_port;
+	virtual masterif                         vif;
+	oMonitor                                 mon;
+	uvm_analysis_port #(instruction_base_si) analysis_port;
 
-  function new (string name, uvm_component parent);
-    super.new(name, parent);
-  endfunction
+	function new (string name, uvm_component parent);
+		super.new(name, parent);
+	endfunction
 
-  virtual function void build_phase(uvm_phase phase);
-    super.build_phase(phase);
+	virtual function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
 
-    mon = oMonitor::type_id::create("mon", this);
+		mon = oMonitor::type_id::create("mon", this);
 
-    analysis_port = new("analysis_port", this);
+		analysis_port = new("analysis_port", this);
 
-    uvm_config_db#(virtual masterif)::get(this, "", "vif", vif);
-    uvm_config_db#(virtual masterif)::set(this, "*", "vif", vif);
+		uvm_config_db#(virtual masterif)::get(this, "", "vif", vif);
+		uvm_config_db#(virtual masterif)::set(this, "*", "vif", vif);
 
-  endfunction: build_phase
+	endfunction: build_phase
 
-  virtual function void connect_phase(uvm_phase phase);
-    super.connect_phase(phase);
-    mon.analysis_port.connect(this.analysis_port);
-  endfunction: connect_phase
+	virtual function void connect_phase(uvm_phase phase);
+		super.connect_phase(phase);
+		mon.analysis_port.connect(this.analysis_port);
+	endfunction: connect_phase
 
 endclass

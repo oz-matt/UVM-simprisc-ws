@@ -7,7 +7,8 @@ package simprisc_uvm_includes;
 	`include "src/seq_items/load_instruction_si.sv"
 	
 	`include "asmgen/asmgen_data_types.sv"
-	`include "asmgen/generated_instruction_list.sv"
+	`include "asmgen/asm_gen_simple_config_textonly.sv"
+	`include "asmgen/simple_generated_instruction_list_textonly.sv"
 	
 	`include "src/regwriter.sv"
 

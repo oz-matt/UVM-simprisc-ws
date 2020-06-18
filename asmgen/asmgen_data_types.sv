@@ -1,9 +1,9 @@
-typedef struct packed {
+typedef struct {
 	string name;
 	instruction_base_si ins[$];
-} asm_subsection_s;
+} asm_subsection_t;
 
-typedef struct packed {
+typedef struct {
 	string name;
-	asm_subsection_s subsection[$];
-} asm_section_s;
+	asm_subsection_t subsection[$];
+} asm_section_t;
