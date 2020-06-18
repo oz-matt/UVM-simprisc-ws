@@ -13,7 +13,7 @@ class test_base extends uvm_test;
 	
 	string section_list[$] = {"_start", "_main", "8", "test_done", "write_tohost", "exit"};
 	int num_instructions_per_section[$] = {32, 10, 1, 1, 1, 2};
-	instr_category_bm categories_in_each_section[$] = {LOAD, LOAD | STORE | ARITHMETIC, STORE, STORE, STORE, STORE};
+	int categories_in_each_section[$] = {LOAD, LOAD | STORE | ARITHMETIC, STORE, STORE, STORE, STORE};
 		
 	function new(string name, uvm_component parent);
 		super.new(name, parent);

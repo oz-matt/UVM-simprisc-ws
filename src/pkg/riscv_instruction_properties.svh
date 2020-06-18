@@ -147,7 +147,7 @@ package riscv_instruction_properties;
 	} riscv_instr_category_t;
 	*/
 	
-	typedef enum bit[31:0] {
+	typedef enum {
 		LOAD            = (1 << 0),
 		STORE           = (1 << 1),
 		SHIFT           = (1 << 2),
