@@ -1,5 +1,3 @@
-`ifndef RISCV_INSTRUCTION_PROPERTIES
-`define RISCV_INSTRUCTION_PROPERTIES
 
 package riscv_instruction_properties;
 
@@ -166,7 +164,4 @@ package riscv_instruction_properties;
 		AMO             = (1 << 15)
 	} instr_category_bm;
 	
-
 endpackage
-
-`endif

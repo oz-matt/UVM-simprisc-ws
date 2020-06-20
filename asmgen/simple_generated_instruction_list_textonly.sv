@@ -3,8 +3,8 @@ import uvm_pkg::*;
 class simple_generated_instruction_list_textonly extends uvm_object;
 	`uvm_object_utils(simple_generated_instruction_list_textonly)
 	
-	asm_subsection_t asm_subsections[$];
-	load_instruction_si lins[$];
+	//asm_subsection_t asm_subsections[$];
+	//load_instruction_si lins[$];
 	
 	string sub1, sub2;
 	
@@ -23,7 +23,7 @@ class simple_generated_instruction_list_textonly extends uvm_object;
 		foreach(aconfig.subsection_names[i]) begin
 			$fwrite(assembly_file_out, $sformatf("%s:\n", aconfig.subsection_names[i]));
 			for(int j=0; j<aconfig.num_instructions[i]; j++) begin
-				
+				instruction_base_si ip = get_rand_instruction(aconfig.allowed_types[i]);
 			end
 	
 		end
@@ -31,27 +31,34 @@ class simple_generated_instruction_list_textonly extends uvm_object;
 	endfunction
 	
 	
-	
-	
-	
 	static function instruction_base_si get_rand_instruction(int typemask);
 		
 		instr_category_bm new_mask = get_rand_type_from_mask(typemask);
 		
-		instruction_base_si hi;
+		instruction_base_si ret;
 		
 		$display("rand:%s", new_mask.name());
 		
-		if(typemask) begin
-			store_instruction_si hi6 = new();
-			$cast(hi, hi6);
-		end
-		else begin
-			load_instruction_si hi9 = new();
-			$cast(hi, hi9);
-		end
+		case(new_mask)
+			
+			LOAD : begin
+				load_instruction_si li = new();
+				ret = li;
+			end
+			
+			STORE : begin
+				store_instruction_si si = new();
+				ret = si;
+			end
+			
+			ARITHMETIC : begin
+				arithmetic_instruction_si ai = new();
+				ret = ai;
+			end
+			
+		endcase
 		
-		return hi;
+		return ret;
 	endfunction
 	
 	static function instr_category_bm get_rand_type_from_mask(int mask);
