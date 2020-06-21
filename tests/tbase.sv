@@ -12,7 +12,7 @@ class test_base extends uvm_test;
 	asm_gen_simple_config_textonly aconfig;
 	
 	string section_list[$] = {"_start", "_main", "8", "test_done", "write_tohost", "_exit"};
-	int num_instructions_per_section[$] = {32, 10, 1, 1, 1, 2};
+	int num_instructions_per_section[$] = {32, 50, 1, 1, 1, 2};
 	int categories_in_each_section[$] = {LOAD, LOAD | STORE | ARITHMETIC, STORE, STORE, STORE, STORE};
 		
 	function new(string name, uvm_component parent);

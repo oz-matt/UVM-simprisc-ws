@@ -38,7 +38,7 @@ class simple_instruction_sequence_textonly extends uvm_sequence#(instruction_bas
 			$fwrite(assembly_file_out, $sformatf("%s:\n", aconfig.subsection_names[i]));
 				
 			for(int j=0; j<aconfig.num_instructions[i]; j++) begin
-				instruction_base_si ip = get_rand_instruction(aconfig.allowed_types[i]);
+				instruction_base_si ip = asmutils::get_rand_instruction(aconfig.allowed_types[i]);
 				`uvm_rand_send(ip);
 				$fwrite(assembly_file_out, $sformatf("%s\n", ip.get_asm_string));
 			end

@@ -17,7 +17,7 @@ class load_instruction_si extends instruction_base_si;
 	endfunction
 
 	virtual function string get_asm_string();
-		return $sformatf("\t\t%s\tx%0d,x%0d,%0d", name.name(), rd, rs1, $signed(`SIGN_EXTEND32(12, i_imm)));
+		return $sformatf("\t\t%s\tx%0d,%0d(x%0d)", name.name(), rd, $signed(`SIGN_EXTEND32(12, i_imm)), rs1);
 	endfunction
 	
 	constraint c_store {

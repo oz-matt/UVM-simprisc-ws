@@ -1,12 +1,14 @@
 package simprisc_uvm_includes;
 	
-	import igen_utils::*;
 	import riscv_instruction_properties::*;
 	import instruction_sequences::*;
+	//import igen_utils::*;
 	
 	//`include "asmgen/asmgen_data_types.sv"
 	`include "asmgen/asm_gen_simple_config_textonly.sv"
 	`include "asmgen/simple_generated_instruction_list_textonly.sv"
+	
+	`include "src/seq_items/asmutils.sv"
 	
 	`include "src/regwriter.sv"
 
